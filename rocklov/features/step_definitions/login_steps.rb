@@ -1,5 +1,6 @@
 Dado('que acesso a página principal') do
-  visit "http://rocklov-web:3000"
+  visit "/"
+  Capybara.page.driver.browser.manage.window.maximize
 end
 
 Quando('submeto minhas credenciais com {string} e {string}') do |email, password|

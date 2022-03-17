@@ -11,7 +11,7 @@
             Dado que acesso a página de cadastro
             Quando submeto o seguinte formulário de cadastro:
             | nome     | email                 | senha       |
-            | Angelica | angelica.lj@gmail.com | angelica123 |
+            | Angelica | angelicajesus@gmail.com | angelica123 |
             Então sou redirecionado para o Dashboard
 
             Esquema do Cenario: Tentativa de cadastro
@@ -24,9 +24,9 @@
 
             Exemplos:
             | nome_input     | email_input           | senha_input | mensagem_output                  |
-            |                | angelica.lj@gmail.com | angelica123 | Oops. Informe seu nome completo! |
-            | Angelica Lemos |                       | angelica123 | Oops. Informe um email válido!   |
-            | Angelica Lemos | angelica.lj#gmail.com | angelica123 | Oops. Informe um email válido!   |
-            | Angelica Lemos | angelica.lj$gmail.com | angelica123 | Oops. Informe um email válido!   |
-            | Angelica Lemos | angelica.lj@gmail.com |             | Oops. Informe sua senha secreta! |
+            |                | angelica.lj@gmail.com   | alj123      | Oops. Informe seu nome completo! |
+            | Angelica Lemos |                         | angelica123 | Oops. Informe um email válido!   |
+            | Angelica Lemos | angelica.lj#gmail.com   | angelica123 | Oops. Informe um email válido!   |
+            | Angelica Lemos | angelica.lj$gmail.com   | angelica123 | Oops. Informe um email válido!   |
+            | Angelica Lemos | angelicajesus@gmail.com |             | Oops. Informe sua senha secreta! |
 
