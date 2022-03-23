@@ -1,6 +1,5 @@
 Dado('que acesso a página de cadastro') do
-  visit "/signup"
-  Capybara.page.driver.browser.manage.window.maximize
+  visit '/signup'
 end
 
 Quando('submeto o seguinte formulário de cadastro:') do |table|

@@ -8,7 +8,9 @@ Funcionalidade: Cadastro de Anúncios
     @cadastro_anuncio
     Cenario: Novo equipo
 
-         Dado que eu tenho o seguinte equipamento:
+         Dado que estou logado como "angelica@gmail.com" e "123456"
+         E que acesso o formulário de cadastro de anúncios
+         E que eu tenho o seguinte equipamento:
                |thumb    | guitarra-fender-strato.jpeg|
                |nome     | Fender Strato              |
                |categoria| Cordas                     |
