@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 Dado('que acesso a página principal') do
-  visit '/'
+  @login_page = LoginPage.new
+  @login_page.acessar_site
 end
 
 Quando('submeto minhas credenciais com {string} e {string}') do |email, password|
-  find("input[placeholder='Seu e-email']").set email
-  find('input[type=password]').set password
-
-  click_button 'Entrar'
+  @login_page.txt_email.set email
+  @login_page.txt_senha.set password
+  @login_page.btn_entrar
 end

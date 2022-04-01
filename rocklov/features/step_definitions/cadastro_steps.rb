@@ -11,7 +11,7 @@ Quando('submeto o seguinte formulário de cadastro:') do |table|
 
   log user
 
-  MongoDB.new.remover_user(user[:email])
+  MongoDB.new.remove_user(user[:email])
 
   find('#fullName').set user[:nome]
   find('#email').set user[:email]
