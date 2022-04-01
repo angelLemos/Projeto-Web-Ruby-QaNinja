@@ -5,15 +5,9 @@ class LoginPage
     visit "/"
   end
 
-  def txt_email 
-    return find("input[placeholder='Seu email']")
-  end
-
-  def txt_senha
-    return find('input[type=password]')
-  end
-
-  def btn_entrar
+  def preencher_dados_login(email, password)
+    find("input[placeholder='Seu email']").set email
+    find('input[type=password]').set password
     click_button 'Entrar'
   end
 end
