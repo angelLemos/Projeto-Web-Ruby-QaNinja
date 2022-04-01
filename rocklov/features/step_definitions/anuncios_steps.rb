@@ -1,9 +1,7 @@
 Dado('que estou logado como {string} e {string}') do |email, password|
   @email = email
-  
-  login_page = LoginPage.new
-  login_page.acessar_site
-  login_page.preencher_dados_login(email, password)
+  @login_page.acessar_site
+  @login_page.preencher_dados_login(email, password)
 end
 
 Dado('que acesso o formulário de cadastro de anúncios') do

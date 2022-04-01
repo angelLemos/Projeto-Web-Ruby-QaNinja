@@ -1,5 +1,4 @@
 Dado('que acesso a página principal') do
-  @login_page = LoginPage.new
   @login_page.acessar_site
 end
 
