@@ -5,9 +5,7 @@ Dado('que estou logado como {string} e {string}') do |email, password|
 end
 
 Dado('que acesso o formulário de cadastro de anúncios') do
-  click_button 'Criar anúncio'
-  # isso é um checkpoint para garantir que estou no lugar correto
-  expect(page).to have_css "#equipoForm"
+  @dash_page.navegar_para_dash_equipo_formulario
 end
 
 Dado('que eu tenho o seguinte equipamento:') do |table|
@@ -17,18 +15,10 @@ Dado('que eu tenho o seguinte equipamento:') do |table|
 end
 
 Quando('submeto o cadastro desse item') do
-  thumb = Dir.pwd + '/features/support/fixtures/images/' + @anuncio[:thumb]
-
-  find('#thumbnail input[type=file]', visible: false).set thumb
-  find('input[placeholder$=equipamento]').set @anuncio[:nome]
-  find('#category').find('option', text: @anuncio[:categoria]).select_option
-  find('#price').set @anuncio[:preco]
-
-  click_button 'Cadastrar'
+  @equipos_page.criar_anuncio(@anuncio)
 end
 
 Entao('devo ver esse item no meu Dashboard') do
-  anuncios = find('.equipo-list')
-  expect(anuncios).to have_content @anuncio[:nome]
-  expect(anuncios).to have_content "R$#{@anuncio[:preco]}/dia"
+  expect(@dash_page.retornar_lista).to have_content @anuncio[:nome]
+  expect(@dash_page.retornar_lista).to have_content "R$#{@anuncio[:preco]}/dia"
 end
