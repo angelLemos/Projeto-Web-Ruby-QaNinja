@@ -19,3 +19,15 @@ Funcionalidade: Cadastro de Anúncios
                |preco    | 200                        |
          Quando submeto o cadastro desse item
          Então devo ver esse item no meu Dashboard
+
+    @temp
+    Cenario: Cadastro anúncio sem foto
+
+         Dado que acesso o formulário de cadastro de anúncios
+         E que eu tenho o seguinte equipamento:
+               |thumb    |              |
+               |nome     | Fender Strato|
+               |categoria| Cordas       |
+               |preco    | 200          |
+         Quando submeto o cadastro desse item
+         Então conter a mensagem de alerta: "Adicione uma foto no seu anúncio!"
