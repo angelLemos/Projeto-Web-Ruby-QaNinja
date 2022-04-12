@@ -11762,3 +11762,13 @@ D, [2022-04-04T16:53:36.949774 #21427] DEBUG -- : MONGODB | Server description f
 D, [2022-04-04T16:53:36.950724 #21427] DEBUG -- : MONGODB | Topology type 'Unknown' changed to type 'Single'.
 D, [2022-04-04T16:53:36.971380 #21427] DEBUG -- : MONGODB | rocklov-db:27017 req:21 conn:1:1 sconn:102 | rocklov.delete | STARTED | {"delete"=>"users", "ordered"=>true, "deletes"=>[{"q"=>{"email"=>"angelicajesus@gmail.com"}, "limit"=>0}], "$db"=>"rocklov", "lsid"=>{"id"=><BSON::Binary:0x50900 type=uuid data=0x6e9c23bcddb542f8...>}}
 D, [2022-04-04T16:53:36.978158 #21427] DEBUG -- : MONGODB | rocklov-db:27017 req:21 | rocklov.delete | SUCCEEDED | 0.006s
+D, [2022-04-11T21:41:03.941081 #19798] DEBUG -- : MONGODB | Topology type 'unknown' initializing.
+D, [2022-04-11T21:41:03.943017 #19798] DEBUG -- : MONGODB | There was a change in the members of the 'Unknown' topology.
+D, [2022-04-11T21:41:03.943534 #19798] DEBUG -- : MONGODB | Server rocklov-db:27017 initializing.
+D, [2022-04-11T21:41:03.944045 #19798] DEBUG -- : MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[rocklov-db:27017] servers=[#<Server address=rocklov-db:27017 UNKNOWN>]>
+D, [2022-04-11T21:41:03.957208 #19798] DEBUG -- : MONGODB | Server description for rocklov-db:27017 changed from 'unknown' to 'standalone'.
+D, [2022-04-11T21:41:03.958304 #19798] DEBUG -- : MONGODB | Topology type 'Unknown' changed to type 'Single'.
+D, [2022-04-11T21:41:03.975834 #19798] DEBUG -- : MONGODB | rocklov-db:27017 req:5 conn:1:1 sconn:4 | rocklov.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"angelica@gmail.com"}, "$db"=>"rocklov", "lsid"=>{"id"=><BSON::Binary:0x4540 type=uuid data=0x36f6bd5625af480d...>}}
+D, [2022-04-11T21:41:03.979360 #19798] DEBUG -- : MONGODB | rocklov-db:27017 req:5 | rocklov.find | SUCCEEDED | 0.003s
+D, [2022-04-11T21:41:03.982070 #19798] DEBUG -- : MONGODB | rocklov-db:27017 req:6 conn:1:1 sconn:4 | rocklov.delete | STARTED | {"delete"=>"equipos", "ordered"=>true, "deletes"=>[{"q"=>{"name"=>"Fender Strato", "user"=>BSON::ObjectId('6245e251e4094b002ad6e3f8')}, "limit"=>0}], "$db"=>"rocklov", "lsid"=>{"id"=><BSON::Binary:0x4540 type=uuid data=0x36f6bd5625af480d...>}}
+D, [2022-04-11T21:41:03.994674 #19798] DEBUG -- : MONGODB | rocklov-db:27017 req:6 | rocklov.delete | SUCCEEDED | 0.012s

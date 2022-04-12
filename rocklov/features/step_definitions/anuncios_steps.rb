@@ -1,11 +1,11 @@
-Dado('que estou logado como {string} e {string}') do |email, password|
+Dado('Login com {string} e {string}') do |email, password|
   @email = email
   @login_page.acessar_site
   @login_page.preencher_dados_login(email, password)
 end
 
 Dado('que acesso o formulário de cadastro de anúncios') do
-  @dash_page.navegar_para_dash_equipo_formulario
+  @dash_page.navegar_para_formulario_equipo
 end
 
 Dado('que eu tenho o seguinte equipamento:') do |table|

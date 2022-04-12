@@ -13,4 +13,5 @@ class DashPage
 
   def retornar_lista
     return find('.equipo-list')
+  end
 end

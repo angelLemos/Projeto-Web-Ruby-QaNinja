@@ -5,11 +5,13 @@ Funcionalidade: Cadastro de Anúncios
     Quero cadastrar meus equipamentos 
     Para que eu possa disponibiliza-los para locação
 
+    Contexto: Login
+      * Login com "angelica@gmail.com" e "123456"
+
     @cadastro_anuncio
     Cenario: Novo equipo
 
-         Dado que estou logado como "angelica@gmail.com" e "123456"
-         E que acesso o formulário de cadastro de anúncios
+         Dado que acesso o formulário de cadastro de anúncios
          E que eu tenho o seguinte equipamento:
                |thumb    | guitarra-fender-strato.jpeg|
                |nome     | Fender Strato              |
