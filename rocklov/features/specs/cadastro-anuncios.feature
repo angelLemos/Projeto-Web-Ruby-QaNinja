@@ -6,7 +6,7 @@ Funcionalidade: Cadastro de Anúncios
     Para que eu possa disponibiliza-los para locação
 
     Contexto: Login
-      * Login com "angelica@gmail.com" e "123456"
+      * Login com "mel@gmail.com" e "pwd123"
 
     @cadastro_anuncio
     Cenario: Novo equipo
@@ -21,13 +21,22 @@ Funcionalidade: Cadastro de Anúncios
          Então devo ver esse item no meu Dashboard
 
     @temp
-    Cenario: Cadastro anúncio sem foto
+    Esquema do Cenario: Tentativa de cadastro de anúncios
 
          Dado que acesso o formulário de cadastro de anúncios
          E que eu tenho o seguinte equipamento:
-               |thumb    |              |
-               |nome     | Fender Strato|
-               |categoria| Cordas       |
-               |preco    | 200          |
+               | thumb     | <foto>      |
+               | nome      | <nome>      |
+               | categoria | <categoria> |
+               | preco     | <preco>     |
          Quando submeto o cadastro desse item
-         Então conter a mensagem de alerta: "Adicione uma foto no seu anúncio!"
+         Então conter a mensagem de alerta: "<saida>"
+
+         Exemplos: 
+         | foto          | nome              | categoria | preco | saida                                |
+         |               | Violao de Nylon   | Cordas    | 150   | Adicione uma foto no seu anúncio!    |
+         | clarinete.jpg |                   | Outros    | 250   | Informe a descrição do anúncio!      |
+         | mic.jpg       | Microfone         |           | 100   | Informe a categoria                  |
+         | trompete.jpg  | Trompete          | Outros    |       | Informe o valor da diária            |
+         | trompete.jpg  | Trompete Clássico | Outros    |  abc  | O valor da diária deve ser numérico! |
+         | mic.jpg       | Microfone Top     | Outros    | 100a  | O valor da diária deve ser numérico! |

@@ -8,7 +8,7 @@
       @login_usuario
       Cenario: Login do usuário
       Dado que acesso a página principal
-      Quando submeto minhas credenciais com "angelica@gmail.com" e "123456"
+      Quando submeto minhas credenciais com "angelica30@gmail.com" e "angelica123"
       Então sou redirecionado para o Dashboard
 
       @tentativas_login

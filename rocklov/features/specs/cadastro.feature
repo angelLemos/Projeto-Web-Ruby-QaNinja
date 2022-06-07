@@ -10,8 +10,8 @@ Funcionalidade: Cadastro
   Cenario: Fazer cadastro
     Dado que acesso a página de cadastro
     Quando submeto o seguinte formulário de cadastro:
-      | nome     | email                   | senha       |
-      | Angelica | angelicajesus@gmail.com | angelica123 |
+      | nome     | email                | senha       |
+      | Angelica | angelica30@gmail.com | angelica123 |
     Então sou redirecionado para o Dashboard
 
   @tentativas_cadastro
